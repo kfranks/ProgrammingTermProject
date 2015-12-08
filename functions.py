@@ -5,5 +5,5 @@ import arcpy
 from arcpy.sa import *
 def unsup(inraster):
   classes=8
-  outunsuper=IsoClusterUnsupervisedClassification(inraster,classes,'','','%outsuper.gsg'%(inraster))
+  outunsuper=IsoClusterUnsupervisedClassification(inraster,classes,'','','','%outsuper.gsg'%(inraster))
   
