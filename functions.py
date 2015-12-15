@@ -9,11 +9,11 @@ from arcpy.sa import *
 def unsup(inraster):
   outname=inraster.split('.')[0]
   classes = 8
-  outunsuper = IsoClusterUnsupervisedClassification(inraster,classes,'','','','%soutunsuper.gsg'%(outname))
+  outunsuper = IsoClusterUnsupervisedClassification(inraster,classes,'','','%s.gsg'%(outname))
   
 # Perform the maximum likelihood classification and outputting a confidence raster along with the classification raster. 
 def maxlik(inraster,sigfile): 
-  outname=inraster.split('.')[0]
-  mlcOut = MLClassify(inraster, sigfile, "", "","", outConfidence,'%soutConf.tif'%(outConfidence),'%smaxlikeout.tif'%(outname))
-  
-  
+  outname=(inraster.split('.')[0])
+  mlcOut = MLClassify(inraster, sigfile, "", "","",'%soutConf.tif'%(outname))
+  sn = 'maxlikeout%s.tif'%(outname)
+  mlcOut.save(sn)
