@@ -2,7 +2,7 @@
 # Katy Franks, Alex Holland, Parker Pennington 
 import arcpy
 import functions
-from arpy import env
+from arcpy import env
 env.workspace=r'E:\SP_Landsat'
 filelist=['las_vegas.tif','Lincoln.tif','SLC.tif','Tucsaloosa.tif']
 for x in filelist:
