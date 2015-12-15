@@ -10,4 +10,3 @@ for x in filelist:
 for x in filelist:
   gsg=x.split('.')[0]+'.gsg'
   functions.maxlik(x,gsg)
-  
